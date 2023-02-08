@@ -1,0 +1,18 @@
+<div class="sidebar" ng-init="subject=javascript">
+    <h3>Trending Subjects</h3>
+    <div class="search">
+             
+        <form action="#">
+            <input type="text"
+                placeholder=" Search Subjects"
+                name="search">
+                </form>
+                </div>
+
+   <a style="text-decoration: none; color: black; cursor: pointer;" (click)="tempService.setSubject('javascript')"> <h4>JavaScript</h4></a>
+    <a style="text-decoration: none; color:black; cursor: pointer;" (click)="tempService.setSubject('harry_potter')"><h4>Harry Potter</h4></a>
+    <a style="text-decoration: none; color:black; cursor: pointer;" (click)="tempService.setSubject('indian_history')"><h4>Indian History</h4></a>
+    <a style="text-decoration: none; color: black; cursor: pointer;" (click)="tempService.setSubject('crypto_currency')"><h4>Crypto Currency</h4></a>
+    <a style="text-decoration: none; color: black; cursor: pointer;" (click)="tempService.setSubject('criminal_law')"><h4>Criminal Law</h4></a>
+    
+</div>

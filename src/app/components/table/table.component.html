@@ -1,0 +1,41 @@
+<div id="spinner">
+<!-- <mat-spinner color="black" diameter="80" mode="indeterminate" strokeWidth="8"></mat-spinner> -->
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="mainpage" >
+   
+             
+        <div class="search-container">
+            <form action="#">
+              <input style="width: 8%;" type="text" placeholder="Search.." name="search" #query >
+              <button (click)="search()" type="button"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+        
+    <!-- <h3 style="margin-left: 20px; float: left;">title</h3> -->
+</div>
+<hr>
+<br>
+
+
+<table>
+    <tr>
+        <th>Title and sub title</th>
+        <th>Author</th>
+        <th>Latest Publish year</th>
+        <th>First Publish year</th>
+    </tr>
+    
+    <tr *ngFor="let item of data">
+        <td>{{item.title}}</td>
+        <td>{{item.author_name[0]}}</td>
+        <td>{{item.publish_year[0]}}</td>
+        <td>{{item.first_publish_year}}</td>
+    </tr>
+</table>
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="large" color="#fff" type="ball-circus" [fullScreen] = "true">Loading</ngx-spinner>
+<div class="buttons" style="margin-left: 75%; margin-top: 2%;">
+<button (click)="previousPage()" *ngIf="1<this.currentPage" class="previous"><b>&#8249;&nbsp;&nbsp;Previous</b></button>
+<button (click)="nextPage()" *ngIf="this.currentPage<totalPages" style="margin-left: 2%;" class="next"><b>Next&nbsp;&nbsp;&#8250;</b></button>
+</div>
